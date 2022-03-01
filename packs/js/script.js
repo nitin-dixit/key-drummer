@@ -8,13 +8,13 @@ function playSound(e) {
   const key = this.document.querySelector(`div[data-key=${e.code}]`);
   if (!audio) return; //stop the function if key didn't match
 
-  key.classList.add("playing");
+  key.classList.toggle('playing');
   audio.currentTime = 0; //repeat the sound before it has played completely by setting currentTime 0
   audio.play();
 }
 
 const keys = Array.from(document.querySelectorAll(".key"));
-keys.forEach((key) => {
+keys.forEach( key => {
   key.addEventListener("transitionend", removeTransition);
 });
 
