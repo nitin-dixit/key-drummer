@@ -1,13 +1,7 @@
-*,
-::before,
-::before {
-  box-sizing: border-box;
-}
-
 html {
+  font-size: 10px;
   background: url("../../assets/images/drummer-6869168_1920.jpg") no-repeat;
   background-size: cover;
-  font-size: 10px;
 }
 
 body,
@@ -17,29 +11,23 @@ html {
   font-family: sans-serif;
 }
 
-body {
-  height: 650px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
 .keys {
   display: flex;
+  flex: 1;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
 .key {
   border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
   width: 10rem;
   text-align: center;
-  transition: all 0.07s ease;
   color: white;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 0.5rem black;
@@ -50,6 +38,7 @@ body {
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
 }
+
 kbd {
   display: block;
   font-size: 4rem;
@@ -61,8 +50,12 @@ kbd {
   letter-spacing: 0.1rem;
   color: #ffc600;
 }
-.note{
+
+.note {
   display: flex;
+  justify-content: center;
+  flex:1;
+  align-items: center;
 }
 .note p {
   font-size: 15px;
@@ -71,9 +64,8 @@ kbd {
   box-shadow: 0 0 1rem #0c0c0c;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 0.5rem black;
-  
 }
 
-.note span{
+.note span {
   font-size: xx-large;
 }
